@@ -14,7 +14,7 @@ import loginPage from "../integration/pageObjects/loginPage";
 
 Cypress.Commands.add("login", (username, password) => {
   const LoginPage = new loginPage();
-  cy.visit(Cypress.env("url"));
+  cy.visit(Cypress.env("homeUrl"));
   LoginPage.getUserNameField().type(username);
   LoginPage.getPasswordField().type(password);
   LoginPage.getLoginButton().click();

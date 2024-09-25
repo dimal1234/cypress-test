@@ -2,17 +2,21 @@ const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
   env: {
-    url: "https://www.saucedemo.com/",
+    homeUrl: "https://www.saucedemo.com/",
     //common password
     password: "secret_sauce",
 
     //Standard user login
     standardUser: "standard_user",
 
-    //invalid username
-    invalid: "test_user",
+    //locked out user
+    lockedOutUser: "locked_out_user",
 
-    //invalid password
+    //problem user
+    problemUser: "problem_user",
+
+    //invalid username, password
+    invalid: "test_user",
     invalidPassword: "test_password",
   },
 
