@@ -18,5 +18,9 @@ class loginPage {
   getError() {
     return cy.get('h3[data-test="error"]');
   }
+
+  getLockedUser() {
+    return cy.get('[data-test="error"]');
+  }
 }
 export default loginPage;

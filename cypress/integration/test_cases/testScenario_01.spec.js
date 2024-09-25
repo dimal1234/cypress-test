@@ -2,7 +2,7 @@ import loginPage from "../pageObjects/loginPage";
 
 describe("Login Function", () => {
   beforeEach("Login Page", () => {
-    cy.visit(Cypress.env("url"));
+    cy.visit(Cypress.env("homeUrl"));
   });
 
   let LoginPage = new loginPage();
@@ -31,6 +31,15 @@ describe("Login Function", () => {
     LoginPage.getError().should(
       "contain",
       "Epic sadface: Username and password do not match any user in this service"
+    );
+  });
+
+  it("Locked out User behavior", () => {
+    LoginPage.getUserNameField().type(Cypress.env("lockedOutUser"));
+    LoginPage.getPasswordField().type(Cypress.env("password"));
+    LoginPage.getLockedUser().should(
+      "contain",
+      "Epic sadface: Sorry, this user has been locked out."
     );
   });
 });
