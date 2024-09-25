@@ -1,3 +1,4 @@
+import loginPage from "../integration/pageObjects/loginPage";
 // ***********************************************
 // This example commands.js shows you how to
 // create various custom commands and overwrite
@@ -10,9 +11,12 @@
 //
 //
 // -- This is a parent command --
-Cypress.Commands.add("login", () => {
-  LoginPage.getUserNameField().type(Cypress.env("standardUser"));
-  LoginPage.getPasswordField().type(Cypress.env("password"));
+
+Cypress.Commands.add("login", (username, password) => {
+  const LoginPage = new loginPage();
+  cy.visit(Cypress.env("url"));
+  LoginPage.getUserNameField().type(username);
+  LoginPage.getPasswordField().type(password);
   LoginPage.getLoginButton().click();
 });
 

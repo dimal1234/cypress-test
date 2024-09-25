@@ -5,7 +5,7 @@ describe("Login Function", () => {
     cy.visit(Cypress.env("url"));
   });
 
-  const LoginPage = new loginPage();
+  let LoginPage = new loginPage();
 
   it("Successfull Login", () => {
     LoginPage.getUserNameField().type(Cypress.env("standardUser"));
