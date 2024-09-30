@@ -1,4 +1,5 @@
 const { defineConfig } = require("cypress");
+const cucumber = require("cypress-cucumber-preprocessor").default;
 
 module.exports = defineConfig({
   env: {
@@ -27,10 +28,10 @@ module.exports = defineConfig({
     setupNodeEvents(on, config) {
       // implement node event listeners here
 
-      const cucumber = require("cypress-cucumber-preprocessor").default;
       on("file:preprocessor", cucumber());
     },
-    specPattern: "cypress/integration/test_cases/",
+    //specPattern: "cypress/integration/test_cases/",
+    specPattern: "cypress/integration/test_cases/cucumberBDD/*.feature",
     pageLoadTimeout: 100000,
   },
 });
