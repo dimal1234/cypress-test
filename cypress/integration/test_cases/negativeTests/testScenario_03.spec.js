@@ -1,4 +1,4 @@
-import loginPage from "../pageObjects/loginPage";
+import loginPage from "../../pageObjects/loginPage";
 
 describe("Different user profile behaviors", () => {
   beforeEach(() => {
