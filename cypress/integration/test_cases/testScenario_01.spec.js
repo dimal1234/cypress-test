@@ -18,6 +18,7 @@ describe("Login Function", () => {
     LoginPage.getUserNameField().type(Cypress.env("invalid"));
     LoginPage.getPasswordField().type(Cypress.env("password"));
     LoginPage.getLoginButton().click();
+    cy.wait(3000);
     LoginPage.getError().should(
       "contain",
       "Epic sadface: Username and password do not match any user in this service"
@@ -28,6 +29,7 @@ describe("Login Function", () => {
     LoginPage.getUserNameField().type(Cypress.env("standardUser"));
     LoginPage.getPasswordField().type(Cypress.env("invalidPassword"));
     LoginPage.getLoginButton().click();
+    cy.wait(3000);
     LoginPage.getError().should(
       "contain",
       "Epic sadface: Username and password do not match any user in this service"
@@ -37,6 +39,7 @@ describe("Login Function", () => {
   it("Locked out User behavior", () => {
     LoginPage.getUserNameField().type(Cypress.env("lockedOutUser"));
     LoginPage.getPasswordField().type(Cypress.env("password"));
+    cy.wait(3000);
     LoginPage.getLockedUser().should(
       "contain",
       "Epic sadface: Sorry, this user has been locked out."
