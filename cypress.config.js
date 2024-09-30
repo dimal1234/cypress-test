@@ -18,6 +18,9 @@ module.exports = defineConfig({
     //invalid username, password
     invalid: "test_user",
     invalidPassword: "test_password",
+
+    //error user
+    visualUser: "visual_user",
   },
 
   e2e: {
