@@ -1,13 +1,10 @@
 import { Given, When, And, Then } from "cypress-cucumber-preprocessor/steps";
-import { Given } from "@badeball/cypress-cucumber-preprocessor";
-import loginPage from "../../../pageObjects/loginPage";
+import loginPage from "../../pageObjects/loginPage";
 
 let LoginPage = new loginPage();
 
 Given("I visit the login page", () => {
-  cy.wait(10000);
-  cy.log("First Step");
-  cy.visit("https://www.saucedemo.com/");
+  cy.visit(Cypress.env("homeUrl"));
 });
 
 When("I fill in the User name", () => {

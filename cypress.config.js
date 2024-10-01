@@ -31,7 +31,7 @@ module.exports = defineConfig({
       on("file:preprocessor", cucumber());
     },
     specPattern: "cypress/integration/test_cases/",
-    //specPattern: "cypress/integration/test_cases/cucumberBDD/*.feature",
+    //specPattern: "cypress/integration/test_cases/**/*.feature",
     pageLoadTimeout: 100000,
   },
 });
