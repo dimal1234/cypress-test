@@ -23,3 +23,5 @@ jobs:
         run: npm ci
       - name: Run Cypress tests
         run: npx cypress run --spec "cypress/integration/test_cases/testScenario_02.spec.js"
+      - name: Run Feature files
+        run: npx cypress run --spec "cypress/integration/test_cases/cucumberBDD/*.feature"
