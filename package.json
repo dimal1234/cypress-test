@@ -179,7 +179,8 @@
   },
   "scripts": {
     "cy:run": "cypress run",
-    "cy:open": "cypress open"
+    "cy:open": "cypress open",
+    "jenkins:run": "npx cypress run --spec \"cypress/integration/test_cases/testScenario_02.spec.js\""
   },
   "repository": {
     "type": "git",
