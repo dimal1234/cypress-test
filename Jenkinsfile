@@ -6,7 +6,7 @@ pipeline {
     // }
 
     tools {
-        NodeJS '20.9.0' // Use the Node.js version defined in environment
+        nodejs 'nodejs_20_9_0' // Use the Node.js version defined in environment
     }
 
     stages {
