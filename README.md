@@ -46,7 +46,7 @@ I have used GitHub Actions to automate CI pipeline, ensuring that every push or 
 
 ## GitHub Actions Workflow
 
-My CI workflow is defined in the* .github/workflows/cypress-tests.yml* file. This workflow automatically installs dependencies, runs tests, and ensures that the build is passing. This will run Cypress tests in a headless mode each time a commit is pushed to the main branch or when a pull request is created.
+My CI workflow is defined in the *.github/workflows/cypress-tests.yml* file. This workflow automatically installs dependencies, runs tests, and ensures that the build is passing. This will run Cypress tests in a headless mode each time a commit is pushed to the main branch or when a pull request is created.
 
 ## Conclusion
 
