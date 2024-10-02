@@ -23,12 +23,13 @@ module.exports = defineConfig({
     //error user
     visualUser: "visual_user",
   },
-
+  reporter: "cypress-mochawesome-reporter",
   e2e: {
     setupNodeEvents(on, config) {
       // implement node event listeners here
 
       on("file:preprocessor", cucumber());
+      require("cypress-mochawesome-reporter/plugin")(on);
     },
     specPattern: "cypress/integration/test_cases/",
     //specPattern: "cypress/integration/test_cases/**/*.feature",
