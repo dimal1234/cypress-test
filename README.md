@@ -1,6 +1,6 @@
 ## **Showcase with Cypress**
 
-This project leverages Cypress for end-to-end testing to ensure that our web application behaves as expected. I have automated the testing process and integrate it with GitHub Actions for continuous integration (CI). Cypress provides a powerful testing framework that is easy to set up and use, with great debugging and reporting features. 
+This project leverages Cypress for end-to-end testing to ensure that web application behaves as expected. I have automated the testing process and integrate it with GitHub Actions for continuous integration (CI). Cypress provides a powerful testing framework that is easy to set up and use, with great debugging and reporting features. 
 Website used: [Sauce Demo Site](https://www.saucedemo.com/ "Sauce Demo Site")
 
 ## Prerequisites
@@ -50,6 +50,6 @@ My CI workflow is defined in the *.github/workflows/cypress-tests.yml* file. Thi
 
 ## Conclusion
 
-This project utilizes Cypress for powerful end-to-end testing, integrated with GitHub Actions for continuous integration. Cypress is further enhanced by using Cucumber and Gherkin for writing BDD test cases, ensuring our application is well-tested and meets the required behaviors.
+This project utilizes Cypress for powerful end-to-end testing, integrated with GitHub Actions for continuous integration. Cypress is further enhanced by using Cucumber and Gherkin for writing BDD test cases, ensuring application is well-tested and meets the required behaviors.
 
 
