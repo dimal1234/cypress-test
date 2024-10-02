@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        NODE_VERSION = 'latest' // Define the version of Node.js to use
+        NODE_VERSION = '20.9.0' // Define the version of Node.js to use
     }
 
     tools {
