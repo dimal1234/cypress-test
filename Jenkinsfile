@@ -1,12 +1,12 @@
 pipeline {
     agent any
 
-    environment {
-        NODE_VERSION = '20.9.0' // Define the version of Node.js to use
-    }
+    // environment {
+    //     NODE_VERSION = '20.9.0' // Define the version of Node.js to use
+    // }
 
     tools {
-        NodeJS NODE_VERSION // Use the Node.js version defined in environment
+        NodeJS '20.9.0' // Use the Node.js version defined in environment
     }
 
     stages {
