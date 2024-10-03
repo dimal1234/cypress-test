@@ -19,15 +19,21 @@ pipeline {
 
         stage('Install Dependencies') {
             steps {
-                // Install Node.js dependencies
-                sh 'npm install'
+                script {
+ // Install Node.js dependencies
+                bat 'npm install'
+                }
+               
             }
         }
 
         stage('Run Cypress Tests') {
             steps {
-                // Run Cypress tests in headless mode
-                sh 'npx cypress run --spec cypress/integration/test_cases/cucumberBDD/*.feature'
+                script{
+                    // Run Cypress tests in headless mode
+                bat 'npx cypress run --spec cypress/integration/test_cases/cucumberBDD/*.feature'
+                }
+                
             }
         }
     }
