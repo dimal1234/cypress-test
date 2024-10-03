@@ -42,11 +42,15 @@ I have followed a Behavior-Driven Development (BDD) approach to ensure my code m
 
 ## Continuous Integration with GitHub Actions
 
-I have used GitHub Actions to automate CI pipeline, ensuring that every push or pull request triggers a build and runs the test suite.
+I have used GitHub Actions to automate CI pipeline, ensuring that every push or pull request triggers a build and runs the test suite. 
 
 ## GitHub Actions Workflow
 
 My CI workflow is defined in the *.github/workflows/cypress-tests.yml* file. This workflow automatically installs dependencies, runs tests, and ensures that the build is passing. This will run Cypress tests in a headless mode each time a commit is pushed to the main branch or when a pull request is created.
+
+## Jenkins Workflow
+
+I have implemented a Jenkins CI/CD (additional) workflow that is triggered automatically whenever a commit is pushed to the GitHub repository. The workflow integrates GitHub and Jenkins using a webhook, so each new commit initiates a Jenkins build process. Additionally, I utilized ngrok to host Jenkins temporarily, allowing it to be accessible externally for integration with GitHub, facilitating seamless communication between the two services.
 
 ## Conclusion
 
