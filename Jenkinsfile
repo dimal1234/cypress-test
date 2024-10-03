@@ -40,8 +40,7 @@ pipeline {
 
     post {
         always {
-            // Publish test results, even if the pipeline fails
-            junit '**/cypress/results/*.xml'
+            cleanWs()
         }
     }
 }
